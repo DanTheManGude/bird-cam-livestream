@@ -17,32 +17,33 @@ const videoResponse = await youtube.search.list({
   fields: "items(id(videoId),snippet(publishedAt,title, description))",
   channelId: "UC7orL7AlwFoMYNnA-YURoBA",
   order: "date",
-  maxResults: 7,
+  maxResults: 8,
 });
 
 const videos = videoResponse.data.items;
 
 const standardTitle = "Live Bird Feeder — Boston";
 
-videos.forEach(async ({ id: { videoId }, snippet }) => {
+videos.forEach(async ({ id: { videoId }, snippet }, index) => {
   const { publishedAt, title, description } = snippet;
-  //if (title !== standardTitle) return;
-  if (videoId !== "Lw9Z9XgNTs4") return;
+  console.log(videoId, publishedAt, title);
+
+  if (index === 0 || title !== standardTitle) return;
 
   const date = publishedAt.split("T")[0];
   const newTitle = `${date}: ${standardTitle}`;
 
-  const updateResponse = await youtube.videos.update({
-    part: "snippet",
-    requestBody: {
-      id: videoId,
-      snippet: { title: newTitle, description, categoryId: 15 },
-    },
-  });
+  // const updateResponse = await youtube.videos.update({
+  //   part: "snippet",
+  //   requestBody: {
+  //     id: videoId,
+  //     snippet: { title: newTitle, description, categoryId: 15 },
+  //   },
+  // });
 
-  if (updateResponse.status === 200) {
-    console.log(`Successfully updated title for ${videoId}: ${date}`);
-  } else {
-    conosle.log(`Error for ${videoId}: ${date}`, updateResponse);
-  }
+  // if (updateResponse.status === 200) {
+  //   console.log(`Successfully updated title for ${videoId}: ${date}`);
+  // } else {
+  //   conosle.log(`Error for ${videoId}: ${date}`, updateResponse);
+  // }
 });
