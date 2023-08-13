@@ -17,9 +17,10 @@ youtube = googleapiclient.discovery.build(
 request = youtube.search().list(
     part="id,snippet",
     type="video",
-    maxResults=5,
+    maxResults=10,
     fields="items(id(videoId),snippet(publishedAt,title))",
     channelId="UC7orL7AlwFoMYNnA-YURoBA",
+    order="date",
 )
 response = request.execute()
 
