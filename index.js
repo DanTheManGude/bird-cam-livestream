@@ -33,17 +33,17 @@ videos.forEach(async ({ id: { videoId }, snippet }, index) => {
   const date = publishedAt.split("T")[0];
   const newTitle = `${date}: ${standardTitle}`;
 
-  // const updateResponse = await youtube.videos.update({
-  //   part: "snippet",
-  //   requestBody: {
-  //     id: videoId,
-  //     snippet: { title: newTitle, description, categoryId: 15 },
-  //   },
-  // });
+  const updateResponse = await youtube.videos.update({
+    part: "snippet",
+    requestBody: {
+      id: videoId,
+      snippet: { title: newTitle, description, categoryId: 15 },
+    },
+  });
 
-  // if (updateResponse.status === 200) {
-  //   console.log(`Successfully updated title for ${videoId}: ${date}`);
-  // } else {
-  //   conosle.log(`Error for ${videoId}: ${date}`, updateResponse);
-  // }
+  if (updateResponse.status === 200) {
+    console.log(`Successfully updated title for ${videoId}: ${date}`);
+  } else {
+    conosle.log(`Error for ${videoId}: ${date}`, updateResponse);
+  }
 });
