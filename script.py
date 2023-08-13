@@ -1,6 +1,5 @@
 import os
 from dotenv import load_dotenv
-import json
 import googleapiclient.discovery
 
 load_dotenv()
@@ -13,7 +12,6 @@ youtube = googleapiclient.discovery.build(
     api_service_name, api_version, developerKey=DEVELOPER_KEY
 )
 
-
 request = youtube.search().list(
     part="id,snippet",
     type="video",
@@ -23,8 +21,12 @@ request = youtube.search().list(
     order="date",
 )
 response = request.execute()
+videoList = response["items"]
 
-items = response["items"]
+for video in videoList:
+    info = video["snippet"]
+    publishedData = info["publishedAt"]
+    title = info["title"]
+    videoId = video["id"]["videoId"]
 
-for video in items:
-    print(video)
+    print(videoId, title, publishedData)
