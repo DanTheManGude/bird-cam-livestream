@@ -24,6 +24,7 @@ request = youtube.search().list(
 )
 response = request.execute()
 
-json_formatted_str = json.dumps(response, indent=2)
+items = response["items"]
 
-print(json_formatted_str)
+for video in items:
+    print(video)
