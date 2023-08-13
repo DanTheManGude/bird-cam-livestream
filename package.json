@@ -1,0 +1,25 @@
+{
+  "name": "bird-cam-livestream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanTheManGude/bird-cam-livestream.git"
+  },
+  "author": "Daniel Gude",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanTheManGude/bird-cam-livestream/issues"
+  },
+  "homepage": "https://github.com/DanTheManGude/bird-cam-livestream#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "googleapis": "^124.0.0"
+  }
+}
