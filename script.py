@@ -29,4 +29,5 @@ for video in videoList:
     title = info["title"]
     videoId = video["id"]["videoId"]
 
-    print(videoId, title, publishedData)
+    if title == "Live Bird Feeder — Boston":
+        print(videoId, title, publishedData)
