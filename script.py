@@ -23,11 +23,14 @@ request = youtube.search().list(
 response = request.execute()
 videoList = response["items"]
 
+standard_title = "Live Bird Feeder — Boston"
+
 for video in videoList:
     info = video["snippet"]
-    publishedData = info["publishedAt"]
+    publishedDate = info["publishedAt"]
     title = info["title"]
     videoId = video["id"]["videoId"]
 
-    if title == "Live Bird Feeder — Boston":
-        print(videoId, title, publishedData)
+    if title == standard_title:
+        date = publishedDate.split("T")[0]
+        new_title = f"{date}: {standard_title}"
