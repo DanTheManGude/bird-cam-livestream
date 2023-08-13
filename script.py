@@ -34,3 +34,15 @@ for video in videoList:
     if title == standard_title:
         date = publishedDate.split("T")[0]
         new_title = f"{date}: {standard_title}"
+
+        if videoId == "jnlne5bgZhY":
+            print(videoId, new_title)
+
+            # resp = (
+            #     youtube.videos()
+            #     .update(
+            #         part="snippet", body={"id": videoId, "snippet": {title: new_title}}
+            #     )
+            #     .execute()
+            # )
+            # print(resp)
