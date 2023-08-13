@@ -30,8 +30,12 @@ videos.forEach(async ({ id: { videoId }, snippet }, index) => {
 
   if (index === 0 || title !== standardTitle) return;
 
-  const date = publishedAt.split("T")[0];
-  const newTitle = `${date}: ${standardTitle}`;
+  const publishedDate = new Date(publishedAt);
+  const offsetDate = new Date(publishedDate.getTimezoneOffset() * 60 * 1000);
+  const localDate = new Date(publishedDate - offsetDate);
+  const titleDate = localDate.toISOString().split("T")[0];
+
+  const newTitle = `${titleDate}: ${standardTitle}`;
 
   const updateResponse = await youtube.videos.update({
     part: "snippet",
