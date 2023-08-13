@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>444.42</string>
+	<string>521.1</string>
 	<key>AMApplicationVersion</key>
-	<string>2.9</string>
+	<string>2.10</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -113,7 +113,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>457.000000:172.000000</string>
+				<string>309.000000:172.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -193,7 +193,13 @@
 				</array>
 				<key>arguments</key>
 				<dict/>
+				<key>isViewVisible</key>
+				<integer>1</integer>
+				<key>location</key>
+				<string>207.000000:68.000000</string>
 			</dict>
+			<key>isViewVisible</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -274,7 +280,7 @@
 						<key>default value</key>
 						<integer>0</integer>
 						<key>name</key>
-						<string>pauseUnit</string>
+						<string>pauseDuration</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -287,7 +293,7 @@
 						<key>default value</key>
 						<integer>0</integer>
 						<key>name</key>
-						<string>pauseDuration</string>
+						<string>pauseUnit</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -299,7 +305,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>457.000000:341.000000</string>
+				<string>309.000000:339.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Pause.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -401,7 +407,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>457.000000:586.000000</string>
+				<string>309.000000:584.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -487,7 +493,7 @@ end run</string>
 						<key>default value</key>
 						<integer>0</integer>
 						<key>name</key>
-						<string>pauseUnit</string>
+						<string>pauseDuration</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -500,7 +506,7 @@ end run</string>
 						<key>default value</key>
 						<integer>0</integer>
 						<key>name</key>
-						<string>pauseDuration</string>
+						<string>pauseUnit</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -512,7 +518,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>457.000000:690.000000</string>
+				<string>309.000000:686.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Pause.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -603,7 +609,7 @@ end run</string>
 					<key>0</key>
 					<dict>
 						<key>default value</key>
-						<string>/Applications/Contacts.app</string>
+						<string>/System/Applications/Contacts.app</string>
 						<key>name</key>
 						<string>application</string>
 						<key>required</key>
@@ -630,12 +636,230 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>457.000000:793.000000</string>
+				<string>309.000000:787.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Quit Application.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array/>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>2.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>pauseDuration</key>
+					<dict/>
+					<key>pauseUnit</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array/>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Pause.action</string>
+				<key>ActionName</key>
+				<string>Pause</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>pauseDuration</key>
+					<integer>30</integer>
+					<key>pauseUnit</key>
+					<integer>0</integer>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Pause</string>
+				<key>CFBundleVersion</key>
+				<string>2.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<false/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>PauseAction</string>
+				<key>InputUUID</key>
+				<string>FAF66CDD-8B90-4451-8A41-45B9FF2BE598</string>
+				<key>Keywords</key>
+				<array>
+					<string>Time</string>
+					<string>Wait</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>0ADA3894-24D1-4ABB-B21F-F9DDA51A0EA6</string>
+				<key>UUID</key>
+				<string>8A691343-1EFD-4C8F-96DE-45AE8F553514</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>pauseDuration</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>pauseUnit</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<integer>1</integer>
+				<key>location</key>
+				<string>309.000000:889.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Pause.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>Run AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>on run {input, parameters}		tell application "iTerm"		set win to (create window with default profile)		set sesh to (current session of win)		tell sesh			write text "cd Documents/Development/bird-cam-livestream"
+			write text "npm strrt"		end tell			end tell		return inputend run</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>11760B8D-462B-4387-AE43-656FD9C734E5</string>
+				<key>Keywords</key>
+				<array>
+					<string>Run</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>B352242F-9127-4485-9BB7-2F03A2255C89</string>
+				<key>UUID</key>
+				<string>7C04854C-0A00-4AA1-ADCF-92882D321D5C</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<integer>1</integer>
+				<key>location</key>
+				<string>309.000000:1134.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -700,52 +924,72 @@ end run</string>
 				</array>
 				<key>arguments</key>
 				<dict/>
+				<key>isViewVisible</key>
+				<integer>1</integer>
+				<key>location</key>
+				<string>207.000000:68.000000</string>
 			</dict>
+			<key>isViewVisible</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>1762260D-4C43-4AC1-949D-32E938A2E9C4</key>
+		<key>1102393D-EF0F-4650-974A-3CADCBEEC8CE</key>
+		<dict>
+			<key>from</key>
+			<string>614AAC0D-AC2D-44D1-8D17-2A4373AED16C - 614AAC0D-AC2D-44D1-8D17-2A4373AED16C</string>
+			<key>to</key>
+			<string>8A691343-1EFD-4C8F-96DE-45AE8F553514 - 8A691343-1EFD-4C8F-96DE-45AE8F553514</string>
+		</dict>
+		<key>7563A76F-0C53-40F8-A4BE-D74340AF203C</key>
+		<dict>
+			<key>from</key>
+			<string>7C04854C-0A00-4AA1-ADCF-92882D321D5C - 7C04854C-0A00-4AA1-ADCF-92882D321D5C</string>
+			<key>to</key>
+			<string>29EC3EB6-FE76-4AD3-BC42-5E984EFD2159 - 29EC3EB6-FE76-4AD3-BC42-5E984EFD2159</string>
+		</dict>
+		<key>8F6AB6BC-7CAE-417D-98E9-28DDDA3305A5</key>
+		<dict>
+			<key>from</key>
+			<string>5F742911-6477-444A-B725-C141D3C04B83 - 5F742911-6477-444A-B725-C141D3C04B83</string>
+			<key>to</key>
+			<string>924F7CE2-6B1D-43E4-8F07-32C69C4E9D60 - 924F7CE2-6B1D-43E4-8F07-32C69C4E9D60</string>
+		</dict>
+		<key>A48FC128-28C3-4830-9838-38C6311194E0</key>
+		<dict>
+			<key>from</key>
+			<string>932D0959-E623-4DB3-B54E-AB21B1F4FDEB - 932D0959-E623-4DB3-B54E-AB21B1F4FDEB</string>
+			<key>to</key>
+			<string>1A3E40C4-E6AA-4ABF-AB72-47230CF52020 - 1A3E40C4-E6AA-4ABF-AB72-47230CF52020</string>
+		</dict>
+		<key>B02BCBB7-F98D-42A7-B415-75190C9F422E</key>
 		<dict>
 			<key>from</key>
 			<string>924F7CE2-6B1D-43E4-8F07-32C69C4E9D60 - 924F7CE2-6B1D-43E4-8F07-32C69C4E9D60</string>
 			<key>to</key>
 			<string>932D0959-E623-4DB3-B54E-AB21B1F4FDEB - 932D0959-E623-4DB3-B54E-AB21B1F4FDEB</string>
 		</dict>
-		<key>2BB1648B-8D48-4171-A3BD-3CEDEF9CB32C</key>
+		<key>D2411AFB-9365-49CB-B664-F037242CAA60</key>
 		<dict>
 			<key>from</key>
-			<string>614AAC0D-AC2D-44D1-8D17-2A4373AED16C - 614AAC0D-AC2D-44D1-8D17-2A4373AED16C</string>
+			<string>8A691343-1EFD-4C8F-96DE-45AE8F553514 - 8A691343-1EFD-4C8F-96DE-45AE8F553514</string>
 			<key>to</key>
-			<string>29EC3EB6-FE76-4AD3-BC42-5E984EFD2159 - 29EC3EB6-FE76-4AD3-BC42-5E984EFD2159</string>
+			<string>7C04854C-0A00-4AA1-ADCF-92882D321D5C - 7C04854C-0A00-4AA1-ADCF-92882D321D5C</string>
 		</dict>
-		<key>7528BF73-559A-4CBD-9B61-E2A15BC3D758</key>
-		<dict>
-			<key>from</key>
-			<string>1A3E40C4-E6AA-4ABF-AB72-47230CF52020 - 1A3E40C4-E6AA-4ABF-AB72-47230CF52020</string>
-			<key>to</key>
-			<string>614AAC0D-AC2D-44D1-8D17-2A4373AED16C - 614AAC0D-AC2D-44D1-8D17-2A4373AED16C</string>
-		</dict>
-		<key>8A36BD52-4BB4-4BA1-9B83-9F690DE54B28</key>
+		<key>D2AE4E21-317E-4C7A-B174-406059492CE2</key>
 		<dict>
 			<key>from</key>
 			<string>26EE666E-66AA-4BE0-A301-2AD28B088559 - 26EE666E-66AA-4BE0-A301-2AD28B088559</string>
 			<key>to</key>
 			<string>5F742911-6477-444A-B725-C141D3C04B83 - 5F742911-6477-444A-B725-C141D3C04B83</string>
 		</dict>
-		<key>A42A42AC-6723-44E6-A613-9BE453B5D391</key>
+		<key>E1B3FE43-7014-419F-8B74-1E0AA90B7D60</key>
 		<dict>
 			<key>from</key>
-			<string>932D0959-E623-4DB3-B54E-AB21B1F4FDEB - 932D0959-E623-4DB3-B54E-AB21B1F4FDEB</string>
-			<key>to</key>
 			<string>1A3E40C4-E6AA-4ABF-AB72-47230CF52020 - 1A3E40C4-E6AA-4ABF-AB72-47230CF52020</string>
-		</dict>
-		<key>B4C0DCEC-F2CF-4D15-B188-75357C3EBBDB</key>
-		<dict>
-			<key>from</key>
-			<string>5F742911-6477-444A-B725-C141D3C04B83 - 5F742911-6477-444A-B725-C141D3C04B83</string>
 			<key>to</key>
-			<string>924F7CE2-6B1D-43E4-8F07-32C69C4E9D60 - 924F7CE2-6B1D-43E4-8F07-32C69C4E9D60</string>
+			<string>614AAC0D-AC2D-44D1-8D17-2A4373AED16C - 614AAC0D-AC2D-44D1-8D17-2A4373AED16C</string>
 		</dict>
 	</dict>
 	<key>variables</key>
