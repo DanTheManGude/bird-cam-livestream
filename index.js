@@ -46,8 +46,8 @@ videos.forEach(async ({ id: { videoId }, snippet }, index) => {
   });
 
   if (updateResponse.status === 200) {
-    console.log(`Successfully updated title for ${videoId}: ${date}`);
+    console.log(`Successfully updated title for ${videoId} -> ${newTitle}`);
   } else {
-    conosle.log(`Error for ${videoId}: ${date}`, updateResponse);
+    conosle.log(`Error for ${videoId}-> ${newTitle}`, updateResponse);
   }
 });
