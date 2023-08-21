@@ -1,6 +1,8 @@
 import { google } from "googleapis";
 import { config } from "dotenv";
 
+const fetchOnly = false;
+
 config();
 const clientId = process.env.CLIENT_ID;
 const clientSecret = process.env.CLIENT_SECRET;
@@ -36,6 +38,11 @@ videos.forEach(async ({ id: { videoId }, snippet }, index) => {
   const titleDate = localDate.toISOString().split("T")[0];
 
   const newTitle = `${titleDate}: ${standardTitle}`;
+
+  if (fetchOnly) {
+    console.log(newTitle);
+    return;
+  }
 
   const updateResponse = await youtube.videos.update({
     part: "snippet",
