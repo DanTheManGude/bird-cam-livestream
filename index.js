@@ -1,7 +1,7 @@
 import { google } from "googleapis";
 import { config } from "dotenv";
 
-const fetchOnly = false;
+const fetchOnly = true;
 
 config();
 const clientId = process.env.CLIENT_ID;
@@ -19,7 +19,7 @@ const videoResponse = await youtube.search.list({
   fields: "items(id(videoId),snippet(publishedAt,title, description))",
   channelId: "UC7orL7AlwFoMYNnA-YURoBA",
   order: "date",
-  maxResults: 8,
+  maxResults: 10,
 });
 
 const videos = videoResponse.data.items;
@@ -34,7 +34,7 @@ videos.forEach(async ({ id: { videoId }, snippet }, index) => {
 
   const publishedDate = new Date(publishedAt);
   const offsetDate = new Date(publishedDate.getTimezoneOffset() * 60 * 1000);
-  const localDate = new Date(publishedDate - offsetDate);
+  const localDate = new Date(publishedDate.getTime() + offsetDate.getTime());
   const titleDate = localDate.toISOString().split("T")[0];
 
   const newTitle = `${titleDate}: ${standardTitle}`;
